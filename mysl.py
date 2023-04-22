@@ -16,7 +16,6 @@ import folium as fo
 import random
 import geopandas as gpd
 from shapely.geometry import Polygon, Point
-from reportlab.pdfgen import canvas
 
 st.set_page_config(layout="wide")
 
