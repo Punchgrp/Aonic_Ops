@@ -161,7 +161,7 @@ def random_point_in_polygon(polygon):
 
 def generate_map(df) :
     map = fo.Map(location = [13.75, 100.50], zoom_start = 6 )
-    th_poly = gpd.read_file("")
+    th_poly = gpd.read_file("https://data.opendevelopmentmekong.net/th/dataset/8f3fa1b8-cb5c-48c8-9fd7-d3c213ea23db/resource/1559cee4-fedc-4330-be9c-d8cf3dd75015/download/tha_admbnda_adm1_rtsd_20190221.zip")
     th_poly["ADM1_EN"] = th_poly["ADM1_EN"].str.replace("Chon Buri","Chonburi")
     #cen = th_poly["geometry"].centroid ; lat = cen.y ; lon = cen.x
 
