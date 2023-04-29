@@ -290,7 +290,7 @@ if 0 < 1 :
     df = pd.read_excel(File,engine='openpyxl').sort_values(by=['Date'],ascending=False).reset_index()
     df = df.fillna("") ; #df = df.rename(columns = {"Service Type2":"Service type"}, inplace = True)
     df.Picture = df.Picture.str.replace(' ','')
-    df.Date = pd.to_datetime(df.Date).dt.date
+    #df.Date = pd.to_datetime(df.Date).dt.date
     df['Date'] = df["Date"].dt.strftime('%d-%m-%Y')
     df["Product"] = df['DJI Enterprise'].str.cat(df['Mist Drone'], sep = ' / ')
     df["Product"] = df["Product"].str.cat(df['Software'], sep = ' / ')
