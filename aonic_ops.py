@@ -286,7 +286,7 @@ File = 'https://drive.google.com/uc?id=' + url.split('/')[-2]
 if 0 < 1 :
     #bytes_data = uploaded_file.read()
     st.write("filename: OPS-DATA")
-    df = pd.read_excel(File).sort_values(by=['Date'], engine='openpyxl',ascending=False).reset_index()
+    df = pd.read_excel(File,engine='openpyxl').sort_values(by=['Date'],ascending=False).reset_index()
     df = df.fillna("") ; #df = df.rename(columns = {"Service Type2":"Service type"}, inplace = True)
     df.Picture = df.Picture.str.replace(' ','')
     df.Date = pd.to_datetime(df.Date).dt.date
