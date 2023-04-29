@@ -292,6 +292,7 @@ if 0 < 1 :
     df.Picture = df.Picture.str.replace(' ','')
     #df.Date = pd.to_datetime(df.Date).dt.date
     df['Date'] = df["Date"].dt.strftime('%d-%m-%Y')
+    df.Date = pd.to_datetime(df.Date).dt.date
     df["Product"] = df['DJI Enterprise'].str.cat(df['Mist Drone'], sep = ' / ')
     df["Product"] = df["Product"].str.cat(df['Software'], sep = ' / ')
     df["Product"] = df["Product"].str.cat(df['Emlid GNSS'], sep = ' / ')
