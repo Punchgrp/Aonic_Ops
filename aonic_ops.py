@@ -435,7 +435,8 @@ if 0 < 1 :
           dft = main_df.iloc[i].T ; dft = pd.DataFrame(dft)
           c_name = dft.columns[0]
           dft.rename(columns = {c_name:'Detail'}, inplace = True)
-          col1.dataframe(dft,use_container_width=True)
+          #col1.dataframe(dft,use_container_width=True)
+          col1.dataframe(dft)
 
         with col2 :
           col2.write("Performance Graph")
