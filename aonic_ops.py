@@ -280,7 +280,7 @@ Graph_list = ['Mist','DJI','Emlid','Training','Service']
 
 url = "https://docs.google.com/spreadsheets/d/1FPd61a1anjNTP-5sWHB_XXiAwUahXgeE/edit?usp=share_link&ouid=106465555471870500346&rtpof=true&sd=true"
 File = 'https://drive.google.com/uc?id=' + url.split('/')[-2]
-File = 'Data/Operation%20Form(1-126).xlsx'
+File = r'Data/Operation Form(1-126).xlsx'
 #uploaded_file = st.file_uploader("Choose a Operation Excel file")
 #engine='openpyxl'
 
