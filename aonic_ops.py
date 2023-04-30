@@ -447,7 +447,7 @@ if 0 < 1 :
         with col3 :
           col3.write("Factor Graph")   
           default_option = 'Mist'       
-          Graph = col3.selectbox("Please select Graph", list(Graph) ,value=default_option,key=Graph2_key_i)          
+          Graph = col3.selectbox("Please select Graph", list(Graph),key=Graph2_key_i)          
           fig = fact_chart[Graph](row)
           col3.write(fig)
           
