@@ -287,7 +287,7 @@ File = r'Data/Operation Form(1-126).xlsx'
 if 0 < 1 :
     #bytes_data = uploaded_file.read()
     st.write("filename: OPS-DATA")
-    df = pd.read_excel(File,engine='openpyxl').sort_values(by=['Date'],ascending=False).reset_index()
+    df = st.cache(pd.read_excel(File,engine='openpyxl').sort_values(by=['Date'],ascending=False).reset_index())
     df = df.fillna("") ; #df = df.rename(columns = {"Service Type2":"Service type"}, inplace = True)
     df.Picture = df.Picture.str.replace(' ','')
     #df.Date = pd.to_datetime(df.Date).dt.date
