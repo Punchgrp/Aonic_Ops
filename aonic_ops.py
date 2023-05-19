@@ -40,6 +40,12 @@ def login():
 # Create the main app function
 def app():
     st.title('Main App')
+    page_names_to_funcs = {
+    "Hello Demo": intro,
+    }
+
+    demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
+    page_names_to_funcs[demo_name]()
     # Add content for your main app here
 
 # Check if the user is logged in
@@ -52,24 +58,10 @@ if not st.session_state.logged_in:
 else:
     app()
 
-st.write("Please Fill password")
-passw = st.text_input("Password:   ")
-if passw == "1234" :
-    st.write(" Ok pass")
-else :
-    print("error")
-
 def intro():
     import streamlit as st
 
     st.write("# Welcome to Streamlit! 👋")
-    
-page_names_to_funcs = {
-    "Hello Demo": intro,
-}
-
-demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
-page_names_to_funcs[demo_name]()
 
 
 st.set_page_config(layout="wide")
