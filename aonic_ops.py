@@ -38,6 +38,12 @@ def login():
             st.error('Invalid username or password')
 
 # Create the main app function
+
+def intro():
+    import streamlit as st
+
+    st.write("# Welcome to Streamlit! 👋")
+    
 def app():
     st.title('Main App')
     page_names_to_funcs = {
