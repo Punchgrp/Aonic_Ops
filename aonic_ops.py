@@ -17,11 +17,13 @@ import random
 import geopandas as gpd
 from shapely.geometry import Polygon, Point
 
+def intro():
+    import streamlit as st
 
+    st.write("# Welcome to Streamlit! 👋")
+    
 page_names_to_funcs = {
-    "Hello Demo": Hello_2,
-    "Mapping Demo": mapping_demo,
-    "DataFrame Demo": data_frame_demo
+    "Hello Demo": intro,
 }
 
 demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
