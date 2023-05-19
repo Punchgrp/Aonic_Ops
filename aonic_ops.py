@@ -37,8 +37,6 @@ def login():
             st.error('Invalid username or password')     
             
 def app():
-    demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
-    page_names_to_funcs[demo_name]()
     
     col1_1 , col2_1 = st.columns((1,4))
     with col2_1 :
@@ -492,5 +490,7 @@ if 'logged_in' not in st.session_state:
 if not st.session_state.logged_in:
     login()
 else:
+    demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
+    page_names_to_funcs[demo_name]()
     app()
 
