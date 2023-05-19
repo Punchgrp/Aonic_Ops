@@ -17,6 +17,18 @@ import random
 import geopandas as gpd
 from shapely.geometry import Polygon, Point
 
+
+page_names_to_funcs = {
+    "—": aonic_ops,
+    "Plotting Demo": plotting_demo,
+    "Mapping Demo": mapping_demo,
+    "DataFrame Demo": data_frame_demo
+}
+
+demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
+page_names_to_funcs[demo_name]()
+
+
 st.set_page_config(layout="wide")
 
 col1_1 , col2_1 = st.columns((1,4))
