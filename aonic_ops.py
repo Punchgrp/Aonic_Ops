@@ -34,11 +34,7 @@ def login():
             # Set logged_in session state to True
             st.session_state.logged_in = True
         else:
-            st.error('Invalid username or password')
-
-page_names_to_funcs = {
-    'Page 1': app()
-}            
+            st.error('Invalid username or password')     
             
 def app():
     demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
@@ -484,6 +480,10 @@ def app():
               pic_len = len(pic)
               r2col1.image(pic,width=400)
 
+ page_names_to_funcs = {
+    'Page 1': app()
+}                      
+                
 # Check if the user is logged in
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
