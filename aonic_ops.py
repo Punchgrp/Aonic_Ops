@@ -31,12 +31,10 @@ def login():
 
     if st.button('Login'):
         if username == valid_username and password == valid_password:
-            # Redirect to the main app
-            app()
+            # Set logged_in session state to True
+            st.session_state.logged_in = True
         else:
             st.error('Invalid username or password')
-
-# Create the main app function
 
 def intro():
     import streamlit as st
@@ -62,12 +60,6 @@ if not st.session_state.logged_in:
     login()
 else:
     app()
-
-def intro():
-    import streamlit as st
-
-    st.write("# Welcome to Streamlit! 👋")
-
 
 col1_1 , col2_1 = st.columns((1,4))
 with col2_1 :
