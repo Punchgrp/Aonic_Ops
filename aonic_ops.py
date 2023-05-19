@@ -480,7 +480,7 @@ def app():
               pic_len = len(pic)
               r2col1.image(pic,width=400)
 
- page_names_to_funcs = {
+page_names_to_funcs = {
     'Page 1': app()
 }                      
                 
