@@ -16,6 +16,7 @@ import folium as fo
 import random
 import geopandas as gpd
 from shapely.geometry import Polygon, Point
+
 st.set_page_config(layout="wide")
 
 # Define username and password
@@ -492,5 +493,4 @@ if not st.session_state.logged_in:
 else:
     demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
     page_names_to_funcs[demo_name]()
-    app()
 
