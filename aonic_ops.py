@@ -20,7 +20,7 @@ from shapely.geometry import Polygon, Point
 
 page_names_to_funcs = {
     "—": aonic_ops,
-    "Plotting Demo": plotting_demo,
+    "Hello Demo": Hello_2,
     "Mapping Demo": mapping_demo,
     "DataFrame Demo": data_frame_demo
 }
