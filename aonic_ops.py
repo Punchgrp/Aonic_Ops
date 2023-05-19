@@ -39,9 +39,9 @@ def login():
         else:
             st.error('Invalid username or password')     
 
-page_names_to_funcs = {
-    'Page 1': app()
-}                      
+#page_names_to_funcs = {
+#    'Page 1': app()
+#}                      
                 
 # Check if the user is logged in
 if 'logged_in' not in st.session_state:
@@ -51,8 +51,9 @@ if 'logged_in' not in st.session_state:
 if not st.session_state.logged_in:
     login()
 else:
-    demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
-    page_names_to_funcs[demo_name]()
+    #demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
+    #page_names_to_funcs[demo_name]()
+    app()
     
     
 def app():
