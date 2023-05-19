@@ -17,6 +17,14 @@ import random
 import geopandas as gpd
 from shapely.geometry import Polygon, Point
 
+
+st.write("Please Fill password")
+passw = str(input("Password:   "))
+if passw == "1234" :
+    st.write(" Ok pass")
+else :
+    print("error")
+
 def intro():
     import streamlit as st
 
