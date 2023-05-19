@@ -20,6 +20,7 @@ from shapely.geometry import Polygon, Point
 
 st.write("Please Fill password")
 passw = str(input("Password:   "))
+st.write(passw)
 if passw == "1234" :
     st.write(" Ok pass")
 else :
