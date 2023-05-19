@@ -16,8 +16,7 @@ import folium as fo
 import random
 import geopandas as gpd
 from shapely.geometry import Polygon, Point
-
-import streamlit as st
+st.set_page_config(layout="wide")
 
 # Define username and password
 valid_username = '123'
@@ -69,8 +68,6 @@ def intro():
 
     st.write("# Welcome to Streamlit! 👋")
 
-
-st.set_page_config(layout="wide")
 
 col1_1 , col2_1 = st.columns((1,4))
 with col2_1 :
