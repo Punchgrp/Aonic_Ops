@@ -17,6 +17,40 @@ import random
 import geopandas as gpd
 from shapely.geometry import Polygon, Point
 
+import streamlit as st
+
+# Define username and password
+valid_username = '123'
+valid_password = '123'
+
+# Create a login function
+def login():
+    st.title('Login')
+
+    username = st.text_input('Username')
+    password = st.text_input('Password', type='password')
+
+    if st.button('Login'):
+        if username == valid_username and password == valid_password:
+            # Redirect to the main app
+            app()
+        else:
+            st.error('Invalid username or password')
+
+# Create the main app function
+def app():
+    st.title('Main App')
+    # Add content for your main app here
+
+# Check if the user is logged in
+if 'logged_in' not in st.session_state:
+    st.session_state.logged_in = False
+
+# Render the login page or the main app based on login status
+if not st.session_state.logged_in:
+    login()
+else:
+    app()
 
 st.write("Please Fill password")
 passw = st.text_input("Password:   ")
