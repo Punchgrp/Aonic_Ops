@@ -20,8 +20,8 @@ from shapely.geometry import Polygon, Point
 st.set_page_config(layout="wide")
 
 # Define username and password
-valid_username = '123'
-valid_password = '123'
+valid_username = '1234'
+valid_password = '1234'
 
 st.write("test")
 
